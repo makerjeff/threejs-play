@@ -1,11 +1,19 @@
 {
   "name": "threejs-play",
   "version": "0.0.1",
+  "private":"true",
   "description": "Experiments with threeJS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jeff Wu <makerjeffwu@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express":"latest",
+    "colors":"latest",
+    "socket.io":"latest",
+    "jade":"^1.11.0",
+    "three":"latest"
+  }
 }
