@@ -14,6 +14,7 @@ Based off of Node Serial experiments <br>
 ###Tutorials Base
 1. [Three.JS: Getting Started](https://github.com/mrdoob/three.js/wiki/Getting-Started)
 2. [Three.JS: Drawing Lines] (https://github.com/mrdoob/three.js/wiki/Drawing-lines)
+3. [BenChung Antialiasing](http://benchung.com/antialiasing-three-js/)
 
 
 ###NOTES
