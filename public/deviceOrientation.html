@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Device Orientation</title>
+
+    <style>
+        .container {
+            position: relative;
+            perspective: 300px;
+
+            height: 200px;
+            width: 200px;
+
+            background-color: rgba(200,20,20,1.0);
+
+        }
+    </style>
+</head>
+<body>
+<h1>Device Orientation</h1>
+
+<!---->
+<div class="main">
+    <table>
+        <tr>
+            <td>Event Supported</td>
+            <td id="doEvent"></td>
+        </tr>
+        <tr>
+            <td>Tilt Left / Right [gamma]</td>
+            <td id="doTiltLR"></td>
+        </tr>
+        <tr>
+            <td>Tilt Front/Back [beta]</td>
+            <td id="doTiltFB"></td>
+        </tr>
+        <tr>
+            <td>Direction [alpha]</td>
+            <td id="doDirection"></td>
+        </tr>
+    </table>
+    <!---->
+</div>
+
+<div class="container" style="perspective: 300px;">
+    <!--<img src="html5_logo.png" id="imgLogo" class="logo">-->
+</div>
+
+<script>
+    if (window.DeviceOrientationEvent){
+        console.log('DeviceOrientation is supported');
+
+        window.addEventListener('deviceorientation', function(event){
+            var tiltLR = event.gamma;
+            var tiltFB = event.beta;
+            var dir = event.alpha;
+
+            console.log(tiltLR);
+            console.log(tiltFB);
+            console.log(dir);
+
+        });
+    } else {
+        console.log('device orientation isn\'t supported! You suck');
+    }
+
+</script>
+
+
+</body>
+</html>
