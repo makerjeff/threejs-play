@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>three four</title>
+
+    <script src="./lib/three.js"></script>
+    <script src="./lib/TrackballControls.js"></script>
+
+    <script>
+        var camera, controls, scene, renderer;
+
+        threeFourInit();
+        threeFourAnimate();
+
+        // functions
+        function threeFourInit() {
+            //create camera (FOV, aspectRatio, nearClip, farClip)
+            camera = new THREE.PerspectiveCamera(45, window,innerWidth/window.innerHeight, 1, 1000 );
+            camera.position.z = 500;
+
+            controls = new THREE.TrackballControls(camera);
+            controls.addEventListener('change', render);
+
+            scene = new THREE.Scene();
+
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -90,7 +90,12 @@ initServer(port);
 function initServer(port){
     var serverPort = port || 3000;  //if no port, default to 3000
     server.listen(serverPort);
-    console.log('Starting server on port ' + serverPort.rainbow);
+
+    if (port === undefined) {
+        console.log('Starting server on default port ' + '3000');
+    } else {
+        console.log('Starting server on port ' + serverPort.rainbow);
+    }
 }
 
 /**
