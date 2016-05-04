@@ -2,7 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>three four</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            overflow: hidden;
+        }
+    </style>
 
     <script src="./lib/three.js"></script>
     <script src="./lib/TrackballControls.js"></script>
@@ -40,7 +50,7 @@
             scene = new THREE.Scene();
 
             //create camera (FOV, aspectRatio, nearClip, farClip)
-            camera = new THREE.PerspectiveCamera(35, 800/600, 0.1, 10000 );
+            camera = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeight, 0.1, 10000 );
             camera.position.z = 15;
             //camera.position.set(-15,10,15);
             camera.lookAt(scene.position);
@@ -67,8 +77,8 @@
             scene.add(light);
 
             //create renderer
-            renderer = new THREE.WebGLRenderer();
-            renderer.setSize(800, 600);
+            renderer = new THREE.WebGLRenderer({antialias: true});
+            renderer.setSize(window.innerWidth, window.innerHeight);
 
             //append renderer to body
             document.body.appendChild(renderer.domElement);
